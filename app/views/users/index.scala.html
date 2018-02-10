@@ -1,7 +1,8 @@
-@(currentUser: User, users: List[User])(implicit messages: Messages, flash: Flash, request: RequestHeader)
+@* SearchResultを受け取るように変更 *@
+@(currentUser: User, users: SearchResult[User])(implicit messages: Messages, flash: Flash, request: RequestHeader)
 
-@main(Messages("Users"), Some(currentUser)) {
+    @main(Messages("Users"), Some(currentUser)) {
 
-    @views.html.users.users(currentUser, users)
+        @views.html.users.users(currentUser, users)
 
-}
+    }
