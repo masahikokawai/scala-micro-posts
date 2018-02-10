@@ -48,6 +48,7 @@ libraryDependencies ++= Seq(
   "ch.qos.logback"         % "logback-classic"               % "1.2.3",
   "org.scalikejdbc"        %% "scalikejdbc-jsr310"           % "2.5.2",
   "com.adrianhurt"         %% "play-bootstrap"               % "1.1-P25-B3",
+  "com.github.t3hnar"      %% "scala-bcrypt"                 % "3.0",
   "mysql"                  % "mysql-connector-java"          % "6.0.6",
   "org.flywaydb"           %% "flyway-play"                  % "3.1.0"
 )
@@ -70,3 +71,5 @@ flywayDriver := envConfig.value.getString("jdbcDriver")
 flywayUrl := envConfig.value.getString("jdbcUrl")
 flywayUser := envConfig.value.getString("jdbcUserName")
 flywayPassword := envConfig.value.getString("jdbcPassword")
+
+TwirlKeys.templateImports ++= Seq("forms._")
